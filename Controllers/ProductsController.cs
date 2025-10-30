@@ -14,14 +14,14 @@ namespace QuanLySanPham.Controllers
         }
 
         // Hiển thị danh sách sản phẩm
-        public IActionResult Index()
+        public IActionResult IndexSP()
         {
             var products = _service.GetAll(); // sửa getAll -> GetAll
             return View(products);
         }
 
         // Xem chi tiết sản phẩm
-        public IActionResult Details(int id)
+        public IActionResult DetailsSP(int id)
         {
             var product = _service.GetById(id);
             if (product == null)
@@ -45,7 +45,7 @@ namespace QuanLySanPham.Controllers
             if (ModelState.IsValid)
             {
                 _service.Create(product);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexSP));
             }
             return View(product);
         }
@@ -69,13 +69,13 @@ namespace QuanLySanPham.Controllers
             if (ModelState.IsValid)
             {
                 _service.Update(product);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexSP));
             }
             return View(product);
         }
 
         // GET: Xóa sản phẩm
-        public IActionResult Delete(int id)
+        public IActionResult DeleteSP(int id)
         {
             var product = _service.GetById(id);
             if (product == null)
@@ -91,7 +91,7 @@ namespace QuanLySanPham.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             _service.Delete(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(IndexSP));
         }
     }
 }

@@ -1,29 +1,28 @@
 using Microsoft.EntityFrameworkCore;
 using QuanLySanPham.Data;
-using QuanLySanPham.Repositories;
 using QuanLySanPham.Repositories.Interfaces;
+using QuanLySanPham.Repositories.Implementation;
 using QuanLySanPham.Services;
-using QuanLySanPham.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// ====== Đăng ký DbContext ======
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// ====== Đăng ký DI cho Repository và Service ======
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
+// ====== Thêm MVC ======
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// ====== Cấu hình pipeline ======
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -31,15 +30,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
+// ====== Định tuyến mặc định ======
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Products}/{action=Index}/{id?}"); // ← đổi mặc định sang Products
 
 app.Run();

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using QuanLySanPham.Data;
@@ -11,7 +10,6 @@ namespace QuanLySanPham.Repositories.Implementation
     {
         private readonly AppDbContext _context;
 
-        // ✅ Sửa constructor đúng chuẩn
         public ProductRepository(AppDbContext context)
         {
             _context = context;

@@ -1,7 +1,6 @@
 using QuanLySanPham.Models;
 using QuanLySanPham.Repositories.Interfaces;
 
-
 namespace QuanLySanPham.Services
 {
     public class ProductService : IProductService
