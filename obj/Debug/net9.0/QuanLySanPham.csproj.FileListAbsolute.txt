@@ -1,0 +1,10 @@
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.csproj.AssemblyReference.cache
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.AssemblyInfoInputs.cache
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.AssemblyInfo.cs
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.csproj.CoreCompileInputs.cache
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.MvcApplicationPartsAssemblyInfo.cs
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.MvcApplicationPartsAssemblyInfo.cache
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.RazorAssemblyInfo.cache
+D:\LTUngdungdoanhnghep\QuanLySanPham\obj\Debug\net9.0\QuanLySanPham.RazorAssemblyInfo.cs
